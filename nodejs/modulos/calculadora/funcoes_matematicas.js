@@ -1,19 +1,18 @@
-
-export function soma(a, b) {
-    return a + b;
+export function somar(num1,num2,num3) {
+    return num1 + num2 + num3;
 }
 
-export function subtrai(a, b) {
+export function subtrair(a, b) {
     return a - b;
 }
 
-export function multiplica(a, b) {
+export function multiplicar(a, b) {
     return a * b;
 }
 
-export function divide(a, b) {
-    if  (b === 0) {
-        throw new Error('Divisão por zero não é permitida.');
-    }
+export function dividir(a, b) {
+    if (b === 0){
+        return "Erro: Divisão por zero!";
+    } 
     return a / b;
 }

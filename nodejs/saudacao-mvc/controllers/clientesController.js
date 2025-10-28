@@ -1,16 +1,17 @@
-const { format } = require('morgan');
-const clientesModel = require('../models/clientesModel');
-
+const usuariosModel = require('../models/usuariosModel');
+const path = require('path');
 
 module.exports = {
+  formLogin: (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'views', 'formLogin.html'));
+  },
 
-    formLogin: (req, res) => {
-        res.sendFile('formLogin.html', {root: './views'});
-    },
-    
   listarClientes: (req, res) => {
-    const { login, senha } = req.body;
-    const mensagem = clientesModelModel.verificarLogin(login, senha);
-    res.send(`<h1>${mensagem}</h1>`);
+    // Exemplo: retornar lista estática. Substitua por lógica de modelo/BD.
+    const clientes = [
+      { id: 1, nome: 'Fulano' },
+      { id: 2, nome: 'Beltrano' }
+    ];
+    res.json(clientes);
   }
 };

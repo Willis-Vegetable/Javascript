@@ -1,14 +1,13 @@
 module.exports = {
-  VerificarLogin: (login, senha) => {
+  verificarLogin: (login, senha) => {
     let acesso;
 
-    if (login === "Asafe" && senha === "12345") {
-    acesso = "Logado";
+    if (login === "Joedio"&& senha === "12345") {
+      acesso = "logado";
 
     } else {
-        acesso = "Negado";
+        acesso = "negado";
     }
-
-    return `Olá, ${login}, seu acesso foi: ${acesso}!`;
-  }
+    return 'Olá, ${login}! Seu acesso foi ${acesso}!';
+    }
 };
